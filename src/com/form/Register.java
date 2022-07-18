@@ -28,11 +28,24 @@ public class Register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jPanelMain = new javax.swing.JPanel();
         jPanelClose = new javax.swing.JPanel();
         jLabelClose = new javax.swing.JLabel();
         jPanelMinimize = new javax.swing.JPanel();
         jLabelMinimize = new javax.swing.JLabel();
+        jPanelCenter = new javax.swing.JPanel();
+        jPanelLeft = new javax.swing.JPanel();
+        jLabelImage = new javax.swing.JLabel();
+        jPanelHeader = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanelRight = new javax.swing.JPanel();
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Registration Page");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -85,15 +98,63 @@ public class Register extends javax.swing.JFrame {
         });
         jPanelMinimize.add(jLabelMinimize, java.awt.BorderLayout.CENTER);
 
+        jPanelCenter.setLayout(new java.awt.GridLayout(1, 2));
+
+        jPanelLeft.setBackground(new java.awt.Color(0, 204, 204));
+        jPanelLeft.setLayout(new java.awt.BorderLayout());
+
+        jLabelImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\output-onlinepngtools.png")); // NOI18N
+        jPanelLeft.add(jLabelImage, java.awt.BorderLayout.CENTER);
+
+        jPanelHeader.setBackground(new java.awt.Color(0, 204, 204));
+        jPanelHeader.setLayout(new java.awt.GridLayout(2, 0, 0, 16));
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 204, 102));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Registration Page");
+        jPanelHeader.add(jLabel2);
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Please Fill Out The Form");
+        jPanelHeader.add(jLabel3);
+
+        jPanelLeft.add(jPanelHeader, java.awt.BorderLayout.NORTH);
+
+        jPanelCenter.add(jPanelLeft);
+
+        jPanelRight.setBackground(new java.awt.Color(51, 255, 255));
+        jPanelRight.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 204, 204), new java.awt.Color(51, 255, 255)));
+
+        javax.swing.GroupLayout jPanelRightLayout = new javax.swing.GroupLayout(jPanelRight);
+        jPanelRight.setLayout(jPanelRightLayout);
+        jPanelRightLayout.setHorizontalGroup(
+            jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 590, Short.MAX_VALUE)
+        );
+        jPanelRightLayout.setVerticalGroup(
+            jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 813, Short.MAX_VALUE)
+        );
+
+        jPanelCenter.add(jPanelRight);
+
         javax.swing.GroupLayout jPanelMainLayout = new javax.swing.GroupLayout(jPanelMain);
         jPanelMain.setLayout(jPanelMainLayout);
         jPanelMainLayout.setHorizontalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMainLayout.createSequentialGroup()
-                .addContainerGap(1086, Short.MAX_VALUE)
-                .addComponent(jPanelMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanelClose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanelCenter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelMainLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanelMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelClose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanelMainLayout.setVerticalGroup(
@@ -103,7 +164,9 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanelClose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(829, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelCenter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -190,10 +253,18 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelClose;
+    private javax.swing.JLabel jLabelImage;
     private javax.swing.JLabel jLabelMinimize;
+    private javax.swing.JPanel jPanelCenter;
     private javax.swing.JPanel jPanelClose;
+    private javax.swing.JPanel jPanelHeader;
+    private javax.swing.JPanel jPanelLeft;
     private javax.swing.JPanel jPanelMain;
     private javax.swing.JPanel jPanelMinimize;
+    private javax.swing.JPanel jPanelRight;
     // End of variables declaration//GEN-END:variables
 }
