@@ -40,7 +40,22 @@ public class Register extends javax.swing.JFrame {
         jPanelHeader = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanelRight = new javax.swing.JPanel();
+        jPanelInfos = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextFieldUsername = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jPasswordFieldPass = new javax.swing.JPasswordField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextFieldEMail = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldPhone = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaAddress = new javax.swing.JTextArea();
+        jButtonRegister = new javax.swing.JButton();
+        jButtonClearAll = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 51));
@@ -52,6 +67,7 @@ public class Register extends javax.swing.JFrame {
         setResizable(false);
 
         jPanelMain.setBackground(new java.awt.Color(0, 204, 204));
+        jPanelMain.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 102, 102)));
         jPanelMain.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jPanelClose.setBackground(new java.awt.Color(0, 204, 204));
@@ -108,7 +124,7 @@ public class Register extends javax.swing.JFrame {
         jPanelLeft.add(jLabelImage, java.awt.BorderLayout.CENTER);
 
         jPanelHeader.setBackground(new java.awt.Color(0, 204, 204));
-        jPanelHeader.setLayout(new java.awt.GridLayout(2, 0, 0, 16));
+        jPanelHeader.setLayout(new java.awt.GridLayout(3, 0, 0, 16));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 204, 102));
@@ -122,6 +138,12 @@ public class Register extends javax.swing.JFrame {
         jLabel3.setText("Please Fill Out The Form");
         jPanelHeader.add(jLabel3);
 
+        jLabel4.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 204, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("To Complete Your Registration");
+        jPanelHeader.add(jLabel4);
+
         jPanelLeft.add(jPanelHeader, java.awt.BorderLayout.NORTH);
 
         jPanelCenter.add(jPanelLeft);
@@ -129,15 +151,107 @@ public class Register extends javax.swing.JFrame {
         jPanelRight.setBackground(new java.awt.Color(51, 255, 255));
         jPanelRight.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 204, 204), new java.awt.Color(51, 255, 255)));
 
+        jPanelInfos.setBackground(new java.awt.Color(51, 255, 255));
+        jPanelInfos.setPreferredSize(new java.awt.Dimension(450, 650));
+        jPanelInfos.setLayout(new java.awt.GridLayout(0, 2, 10, 30));
+
+        jLabel5.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\users-16\\png-64\\account-64x64-1214443.png")); // NOI18N
+        jLabel5.setText("Username: ");
+        jPanelInfos.add(jLabel5);
+
+        jTextFieldUsername.setBackground(new java.awt.Color(204, 255, 255));
+        jTextFieldUsername.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jTextFieldUsername.setForeground(new java.awt.Color(0, 0, 0));
+        jPanelInfos.add(jTextFieldUsername);
+
+        jLabel6.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\security-65\\png-64\\lock-64x64-1213982.png")); // NOI18N
+        jLabel6.setText(" Password: ");
+        jPanelInfos.add(jLabel6);
+
+        jPasswordFieldPass.setBackground(new java.awt.Color(204, 255, 255));
+        jPasswordFieldPass.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jPasswordFieldPass.setForeground(new java.awt.Color(0, 0, 0));
+        jPanelInfos.add(jPasswordFieldPass);
+
+        jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\communication-53\\png-64\\message-64x64-1214402.png")); // NOI18N
+        jLabel7.setText("      E-Mail: ");
+        jPanelInfos.add(jLabel7);
+
+        jTextFieldEMail.setBackground(new java.awt.Color(204, 255, 255));
+        jTextFieldEMail.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jTextFieldEMail.setForeground(new java.awt.Color(0, 0, 0));
+        jPanelInfos.add(jTextFieldEMail);
+
+        jLabel8.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\communication-53\\png-64\\call-64x64-1214404.png")); // NOI18N
+        jLabel8.setText("     Phone: ");
+        jPanelInfos.add(jLabel8);
+
+        jTextFieldPhone.setBackground(new java.awt.Color(204, 255, 255));
+        jTextFieldPhone.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jTextFieldPhone.setForeground(new java.awt.Color(0, 0, 0));
+        jPanelInfos.add(jTextFieldPhone);
+
+        jLabel9.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\location-and-map\\png-64\\location-64x64-1214139.png")); // NOI18N
+        jLabel9.setText("  Address: ");
+        jLabel9.setToolTipText("");
+        jPanelInfos.add(jLabel9);
+
+        jTextAreaAddress.setBackground(new java.awt.Color(204, 255, 255));
+        jTextAreaAddress.setColumns(20);
+        jTextAreaAddress.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jTextAreaAddress.setForeground(new java.awt.Color(0, 0, 0));
+        jTextAreaAddress.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaAddress);
+
+        jPanelInfos.add(jScrollPane1);
+
+        jButtonRegister.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonRegister.setFont(new java.awt.Font("Verdana", 1, 22)); // NOI18N
+        jButtonRegister.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonRegister.setText("REGISTER");
+        jPanelInfos.add(jButtonRegister);
+
+        jButtonClearAll.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonClearAll.setFont(new java.awt.Font("Verdana", 1, 22)); // NOI18N
+        jButtonClearAll.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonClearAll.setText("CLEAR ALL");
+        jButtonClearAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearAllActionPerformed(evt);
+            }
+        });
+        jPanelInfos.add(jButtonClearAll);
+
         javax.swing.GroupLayout jPanelRightLayout = new javax.swing.GroupLayout(jPanelRight);
         jPanelRight.setLayout(jPanelRightLayout);
         jPanelRightLayout.setHorizontalGroup(
             jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
+            .addGroup(jPanelRightLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jPanelInfos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanelRightLayout.setVerticalGroup(
             jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 813, Short.MAX_VALUE)
+            .addGroup(jPanelRightLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jPanelInfos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jPanelCenter.add(jPanelRight);
@@ -217,6 +331,14 @@ public class Register extends javax.swing.JFrame {
         this.setState(java.awt.Frame.ICONIFIED);
     }//GEN-LAST:event_jLabelMinimizeMouseClicked
 
+    private void jButtonClearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearAllActionPerformed
+        this.jTextFieldUsername.setText("");
+        this.jPasswordFieldPass.setText("");
+        this.jTextFieldEMail.setText("");
+        this.jTextFieldPhone.setText("");
+        this.jTextAreaAddress.setText("");
+    }//GEN-LAST:event_jButtonClearAllActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -253,18 +375,33 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonClearAll;
+    private javax.swing.JButton jButtonRegister;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelClose;
     private javax.swing.JLabel jLabelImage;
     private javax.swing.JLabel jLabelMinimize;
     private javax.swing.JPanel jPanelCenter;
     private javax.swing.JPanel jPanelClose;
     private javax.swing.JPanel jPanelHeader;
+    private javax.swing.JPanel jPanelInfos;
     private javax.swing.JPanel jPanelLeft;
     private javax.swing.JPanel jPanelMain;
     private javax.swing.JPanel jPanelMinimize;
     private javax.swing.JPanel jPanelRight;
+    private javax.swing.JPasswordField jPasswordFieldPass;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaAddress;
+    private javax.swing.JTextField jTextFieldEMail;
+    private javax.swing.JTextField jTextFieldPhone;
+    private javax.swing.JTextField jTextFieldUsername;
     // End of variables declaration//GEN-END:variables
 }
