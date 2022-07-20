@@ -61,6 +61,7 @@ public class Register extends javax.swing.JFrame {
         jTextAreaAddress = new javax.swing.JTextArea();
         jButtonRegister = new javax.swing.JButton();
         jButtonClearAll = new javax.swing.JButton();
+        jToggleButtonLogin = new javax.swing.JToggleButton();
 
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 51));
@@ -226,7 +227,7 @@ public class Register extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 153, 0));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/location-64x64-1214139.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\location-and-map\\png-64\\location-64x64-1214139.png")); // NOI18N
         jLabel9.setText("  Address: ");
         jLabel9.setToolTipText("");
         jPanelInfos.add(jLabel9);
@@ -267,6 +268,17 @@ public class Register extends javax.swing.JFrame {
         });
         jPanelInfos.add(jButtonClearAll);
 
+        jToggleButtonLogin.setBackground(new java.awt.Color(204, 255, 255));
+        jToggleButtonLogin.setFont(new java.awt.Font("Verdana", 1, 22)); // NOI18N
+        jToggleButtonLogin.setForeground(new java.awt.Color(0, 0, 0));
+        jToggleButtonLogin.setText("LOGIN");
+        jToggleButtonLogin.setPreferredSize(new java.awt.Dimension(160, 60));
+        jToggleButtonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelRightLayout = new javax.swing.GroupLayout(jPanelRight);
         jPanelRight.setLayout(jPanelRightLayout);
         jPanelRightLayout.setHorizontalGroup(
@@ -275,13 +287,19 @@ public class Register extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addComponent(jPanelInfos, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRightLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jToggleButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(209, 209, 209))
         );
         jPanelRightLayout.setVerticalGroup(
             jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRightLayout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addComponent(jPanelInfos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToggleButtonLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jPanelCenter.add(jPanelRight);
@@ -309,7 +327,7 @@ public class Register extends javax.swing.JFrame {
                     .addComponent(jPanelClose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelCenter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanelCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -429,7 +447,7 @@ public class Register extends javax.swing.JFrame {
                     Login login = new Login();
                     login.setVisible(true);
                     this.dispose();
-                }else{
+                } else {
                     JOptionPane.showMessageDialog(this, "There has been an error while creating your account.\n"
                             + "Please contact the library manager", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
@@ -439,6 +457,17 @@ public class Register extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButtonRegisterActionPerformed
+
+    private void jToggleButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonLoginActionPerformed
+        var tmp = JOptionPane.showConfirmDialog(this, "Are you sure you want to go back to\n"
+                + "the login page without completing\nyour registration?", 
+                "Are You Sure?", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (tmp == JOptionPane.YES_OPTION) {
+            Login login = new Login();
+            login.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_jToggleButtonLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -504,6 +533,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldEMail;
     private javax.swing.JTextField jTextFieldPhone;
     private javax.swing.JTextField jTextFieldUsername;
+    private javax.swing.JToggleButton jToggleButtonLogin;
     // End of variables declaration//GEN-END:variables
 
     private boolean isValidCharForUsername(java.awt.event.KeyEvent evt) {
