@@ -202,7 +202,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\cyber\Documents\Java Development Resources\IconPack\output-onlinepngtools.png"/>
+                      <Image iconType="3" name="/images/output-onlinepngtools.png"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -332,7 +332,7 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\cyber\Documents\Java Development Resources\IconPack\users-16\png-64\account-64x64-1214443.png"/>
+                          <Image iconType="3" name="/images/account-64x64-1214443.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Username: "/>
                       </Properties>
@@ -363,7 +363,7 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\cyber\Documents\Java Development Resources\IconPack\security-65\png-64\lock-64x64-1213982.png"/>
+                          <Image iconType="3" name="/images/lock-64x64-1213982.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value=" Password: "/>
                       </Properties>
@@ -394,7 +394,7 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\cyber\Documents\Java Development Resources\IconPack\communication-53\png-64\message-64x64-1214402.png"/>
+                          <Image iconType="3" name="/images/message-64x64-1214402.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="      E-Mail: "/>
                       </Properties>
@@ -422,7 +422,7 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\cyber\Documents\Java Development Resources\IconPack\communication-53\png-64\call-64x64-1214404.png"/>
+                          <Image iconType="3" name="/images/call-64x64-1214404.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="     Phone: "/>
                       </Properties>
@@ -453,7 +453,7 @@
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\cyber\Documents\Java Development Resources\IconPack\location-and-map\png-64\location-64x64-1214139.png"/>
+                          <Image iconType="3" name="/images/location-64x64-1214139.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="  Address: "/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>

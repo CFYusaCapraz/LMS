@@ -125,7 +125,7 @@ public class Register extends javax.swing.JFrame {
         jPanelLeft.setLayout(new java.awt.BorderLayout());
 
         jLabelImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\output-onlinepngtools.png")); // NOI18N
+        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/output-onlinepngtools.png"))); // NOI18N
         jPanelLeft.add(jLabelImage, java.awt.BorderLayout.CENTER);
 
         jPanelHeader.setBackground(new java.awt.Color(0, 204, 204));
@@ -163,7 +163,7 @@ public class Register extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 153, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\users-16\\png-64\\account-64x64-1214443.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/account-64x64-1214443.png"))); // NOI18N
         jLabel5.setText("Username: ");
         jPanelInfos.add(jLabel5);
 
@@ -180,7 +180,7 @@ public class Register extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 153, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\security-65\\png-64\\lock-64x64-1213982.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lock-64x64-1213982.png"))); // NOI18N
         jLabel6.setText(" Password: ");
         jPanelInfos.add(jLabel6);
 
@@ -197,7 +197,7 @@ public class Register extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 153, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\communication-53\\png-64\\message-64x64-1214402.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/message-64x64-1214402.png"))); // NOI18N
         jLabel7.setText("      E-Mail: ");
         jPanelInfos.add(jLabel7);
 
@@ -209,7 +209,7 @@ public class Register extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 153, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\communication-53\\png-64\\call-64x64-1214404.png")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/call-64x64-1214404.png"))); // NOI18N
         jLabel8.setText("     Phone: ");
         jPanelInfos.add(jLabel8);
 
@@ -226,7 +226,7 @@ public class Register extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 153, 0));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\cyber\\Documents\\Java Development Resources\\IconPack\\location-and-map\\png-64\\location-64x64-1214139.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/location-64x64-1214139.png"))); // NOI18N
         jLabel9.setText("  Address: ");
         jLabel9.setToolTipText("");
         jPanelInfos.add(jLabel9);
@@ -426,7 +426,9 @@ public class Register extends javax.swing.JFrame {
                 if (create_row == 1) {
                     JOptionPane.showMessageDialog(this, "Account has been created successfully.\n"
                             + "Redirecting you to login page.", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
-                    // Will activate Login form here
+                    Login login = new Login();
+                    login.setVisible(true);
+                    this.dispose();
                 }else{
                     JOptionPane.showMessageDialog(this, "There has been an error while creating your account.\n"
                             + "Please contact the library manager", "ERROR", JOptionPane.ERROR_MESSAGE);

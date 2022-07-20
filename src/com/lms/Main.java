@@ -4,6 +4,7 @@
  */
 package com.lms;
 
+import com.form.*;
 /**
  *
  * @author cyber
@@ -12,7 +13,8 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
-        var tmp = com.dbcon.HyperMethod.getConnection();
+        com.form.Register reg = new com.form.Register();
+        reg.setVisible(true);
     }
 
 }
