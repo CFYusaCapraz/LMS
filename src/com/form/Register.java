@@ -4,7 +4,12 @@
  */
 package com.form;
 
+import com.dbcon.HyperMethod;
 import java.awt.Color;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -163,8 +168,13 @@ public class Register extends javax.swing.JFrame {
         jPanelInfos.add(jLabel5);
 
         jTextFieldUsername.setBackground(new java.awt.Color(204, 255, 255));
-        jTextFieldUsername.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jTextFieldUsername.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jTextFieldUsername.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldUsername.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldUsernameKeyTyped(evt);
+            }
+        });
         jPanelInfos.add(jTextFieldUsername);
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -175,8 +185,13 @@ public class Register extends javax.swing.JFrame {
         jPanelInfos.add(jLabel6);
 
         jPasswordFieldPass.setBackground(new java.awt.Color(204, 255, 255));
-        jPasswordFieldPass.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jPasswordFieldPass.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jPasswordFieldPass.setForeground(new java.awt.Color(0, 0, 0));
+        jPasswordFieldPass.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPasswordFieldPassKeyTyped(evt);
+            }
+        });
         jPanelInfos.add(jPasswordFieldPass);
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -187,7 +202,7 @@ public class Register extends javax.swing.JFrame {
         jPanelInfos.add(jLabel7);
 
         jTextFieldEMail.setBackground(new java.awt.Color(204, 255, 255));
-        jTextFieldEMail.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jTextFieldEMail.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jTextFieldEMail.setForeground(new java.awt.Color(0, 0, 0));
         jPanelInfos.add(jTextFieldEMail);
 
@@ -199,8 +214,13 @@ public class Register extends javax.swing.JFrame {
         jPanelInfos.add(jLabel8);
 
         jTextFieldPhone.setBackground(new java.awt.Color(204, 255, 255));
-        jTextFieldPhone.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        jTextFieldPhone.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jTextFieldPhone.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldPhone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldPhoneKeyTyped(evt);
+            }
+        });
         jPanelInfos.add(jTextFieldPhone);
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -213,9 +233,14 @@ public class Register extends javax.swing.JFrame {
 
         jTextAreaAddress.setBackground(new java.awt.Color(204, 255, 255));
         jTextAreaAddress.setColumns(20);
-        jTextAreaAddress.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jTextAreaAddress.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jTextAreaAddress.setForeground(new java.awt.Color(0, 0, 0));
         jTextAreaAddress.setRows(5);
+        jTextAreaAddress.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextAreaAddressKeyTyped(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTextAreaAddress);
 
         jPanelInfos.add(jScrollPane1);
@@ -224,6 +249,11 @@ public class Register extends javax.swing.JFrame {
         jButtonRegister.setFont(new java.awt.Font("Verdana", 1, 22)); // NOI18N
         jButtonRegister.setForeground(new java.awt.Color(0, 0, 0));
         jButtonRegister.setText("REGISTER");
+        jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegisterActionPerformed(evt);
+            }
+        });
         jPanelInfos.add(jButtonRegister);
 
         jButtonClearAll.setBackground(new java.awt.Color(204, 255, 255));
@@ -242,9 +272,9 @@ public class Register extends javax.swing.JFrame {
         jPanelRightLayout.setHorizontalGroup(
             jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRightLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jPanelInfos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGap(53, 53, 53)
+                .addComponent(jPanelInfos, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanelRightLayout.setVerticalGroup(
             jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -339,6 +369,75 @@ public class Register extends javax.swing.JFrame {
         this.jTextAreaAddress.setText("");
     }//GEN-LAST:event_jButtonClearAllActionPerformed
 
+    private void jTextFieldUsernameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldUsernameKeyTyped
+        if (!isValidCharForUsername(evt))
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldUsernameKeyTyped
+
+    private void jPasswordFieldPassKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldPassKeyTyped
+        if (jPasswordFieldPass.getPassword().length > 23)
+            evt.consume();
+    }//GEN-LAST:event_jPasswordFieldPassKeyTyped
+
+    private void jTextFieldPhoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldPhoneKeyTyped
+        if (!Character.isDigit(evt.getKeyChar()) || (jTextFieldPhone.getText().length() > 10))
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldPhoneKeyTyped
+
+    private void jTextAreaAddressKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextAreaAddressKeyTyped
+        if (!isValidCharacterAddress(evt)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextAreaAddressKeyTyped
+
+    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
+        if (jTextFieldUsername.getText().length() == 0 || jTextFieldEMail.getText().length() == 0 || jTextFieldPhone.getText().length() == 0
+                || jTextAreaAddress.getText().length() == 0 || jPasswordFieldPass.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(this, "All these information are neccesary.\n"
+                    + "Please fill all of them!", "WARNING", JOptionPane.WARNING_MESSAGE);
+        } else if (isValidEmail()) {
+            JOptionPane.showMessageDialog(this, "Invalid e-mail address format.\n"
+                    + "Please check it!", "WARNING", JOptionPane.WARNING_MESSAGE);
+        } else if (isUsernameExists()) {
+            JOptionPane.showMessageDialog(this, "Username is in use.\n"
+                    + "Please change the username.", "WARNING", JOptionPane.WARNING_MESSAGE);
+        } else if (isMailExists()) {
+            JOptionPane.showMessageDialog(this, "E-Mail address is in use.\n"
+                    + "Please change the E-Mail address.", "WARNING", JOptionPane.WARNING_MESSAGE);
+        } else if (isPhoneExists()) {
+            JOptionPane.showMessageDialog(this, "Phone number is in use.\n"
+                    + "Please change the phone number.", "WARNING", JOptionPane.WARNING_MESSAGE);
+        } else {
+            String username = jTextFieldUsername.getText();
+            String password = String.valueOf(jPasswordFieldPass.getPassword());
+            String mail = jTextFieldEMail.getText();
+            String phone = jTextFieldPhone.getText();
+            String address = jTextAreaAddress.getText();
+            try {
+                var conn = HyperMethod.getConnection();
+                var pst = conn.prepareStatement("insert into users (user_id, user_username, user_password, user_mail, user_phone, user_address, role_id) "
+                        + "values (NULL,?,?,?,?,?,100)");
+                pst.setString(1, username);
+                pst.setString(2, password);
+                pst.setString(3, mail);
+                pst.setString(4, phone);
+                pst.setString(5, address);
+                int create_row = pst.executeUpdate();
+                if (create_row == 1) {
+                    JOptionPane.showMessageDialog(this, "Account has been created successfully.\n"
+                            + "Redirecting you to login page.", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
+                    // Will activate Login form here
+                }else{
+                    JOptionPane.showMessageDialog(this, "There has been an error while creating your account.\n"
+                            + "Please contact the library manager", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } catch (SQLException ex) {
+                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButtonRegisterActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -404,4 +503,97 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldPhone;
     private javax.swing.JTextField jTextFieldUsername;
     // End of variables declaration//GEN-END:variables
+
+    private boolean isValidCharForUsername(java.awt.event.KeyEvent evt) {
+
+        if (!Character.isLetter(evt.getKeyChar()) && !Character.isDigit(evt.getKeyChar()) && !(evt.getKeyChar() == '_')) {
+            return false;
+        } else if (jTextFieldUsername.getText().length() > 23) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidEmail() {
+        final String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        if (jTextFieldEMail.getText().matches(EMAIL_REGEX)) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidCharacterAddress(java.awt.event.KeyEvent evt) {
+        if (!Character.isLetter(evt.getKeyChar()) && !Character.isDigit(evt.getKeyChar())
+                && !(evt.getKeyChar() == '.') && !(evt.getKeyChar() == ':')
+                && !(evt.getKeyChar() == '/') && !(evt.getKeyChar() == ' ')) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isUsernameExists() {
+        boolean exists;
+        String username;
+        try {
+            username = jTextFieldUsername.getText();
+            var conn = HyperMethod.getConnection();
+            var pst = conn.prepareStatement("select user_username from users where user_username = ?");
+            pst.setString(1, username);
+            var rs = pst.executeQuery();
+            exists = rs.next();
+            if (exists) {
+                rs.close();
+                pst.close();
+                conn.close();
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+
+    private boolean isMailExists() {
+        boolean exists;
+        String mail;
+        try {
+            mail = jTextFieldEMail.getText();
+            var conn = HyperMethod.getConnection();
+            var pst = conn.prepareStatement("select user_mail from users where user_mail = ?");
+            pst.setString(1, mail);
+            var rs = pst.executeQuery();
+            exists = rs.next();
+            if (exists) {
+                rs.close();
+                pst.close();
+                conn.close();
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+
+    private boolean isPhoneExists() {
+        boolean exists;
+        String phone;
+        try {
+            phone = jTextFieldPhone.getText();
+            var conn = HyperMethod.getConnection();
+            var pst = conn.prepareStatement("select user_phone from users where user_phone = ?");
+            pst.setString(1, phone);
+            var rs = pst.executeQuery();
+            exists = rs.next();
+            if (exists) {
+                rs.close();
+                pst.close();
+                conn.close();
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }
