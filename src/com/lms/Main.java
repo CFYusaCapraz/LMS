@@ -13,8 +13,8 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
-        com.form.Register reg = new com.form.Register();
-        reg.setVisible(true);
+        Login login = new Login();
+        login.setVisible(true);
     }
 
 }
