@@ -271,8 +271,8 @@ public class Register extends javax.swing.JFrame {
         jToggleButtonLogin.setBackground(new java.awt.Color(204, 255, 255));
         jToggleButtonLogin.setFont(new java.awt.Font("Verdana", 1, 22)); // NOI18N
         jToggleButtonLogin.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButtonLogin.setText("LOGIN");
-        jToggleButtonLogin.setPreferredSize(new java.awt.Dimension(160, 60));
+        jToggleButtonLogin.setText("Go Back To LOGIN");
+        jToggleButtonLogin.setPreferredSize(new java.awt.Dimension(300, 60));
         jToggleButtonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButtonLoginActionPerformed(evt);
@@ -290,7 +290,7 @@ public class Register extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRightLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jToggleButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(209, 209, 209))
+                .addGap(144, 144, 144))
         );
         jPanelRightLayout.setVerticalGroup(
             jPanelRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
