@@ -4,7 +4,7 @@
  */
 package com.cyberfreak.lms;
 
-import com.cyberfreak.form.Login;
+import com.cyberfreak.form.*;
 /**
  *
  * @author cyber
