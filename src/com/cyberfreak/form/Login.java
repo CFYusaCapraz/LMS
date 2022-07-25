@@ -109,7 +109,7 @@ public class Login extends javax.swing.JFrame {
         jPanelHeader.setLayout(new java.awt.GridLayout(0, 1));
 
         jLabelImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/output-onlinepngtools (3).png"))); // NOI18N
+        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/output-onlinepngtools (3).png"))); // NOI18N
         jLabelImage.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPanelHeader.add(jLabelImage);
 
@@ -136,13 +136,13 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 153, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/account-96x96-1214443.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/account-96x96-1214443.png"))); // NOI18N
         jLabel2.setText("Username: ");
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 153, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lock-96x96-1213982.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/lock-96x96-1213982.png"))); // NOI18N
         jLabel4.setText(" Password: ");
 
         jTextFieldUsername.setBackground(new java.awt.Color(204, 255, 255));

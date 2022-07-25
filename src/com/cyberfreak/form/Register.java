@@ -126,7 +126,7 @@ public class Register extends javax.swing.JFrame {
         jPanelLeft.setLayout(new java.awt.BorderLayout());
 
         jLabelImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/output-onlinepngtools.png"))); // NOI18N
+        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/output-onlinepngtools.png"))); // NOI18N
         jPanelLeft.add(jLabelImage, java.awt.BorderLayout.CENTER);
 
         jPanelHeader.setBackground(new java.awt.Color(0, 204, 204));
@@ -164,7 +164,7 @@ public class Register extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 153, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/account-64x64-1214443.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/account-64x64-1214443.png"))); // NOI18N
         jLabel5.setText("Username: ");
         jPanelInfos.add(jLabel5);
 
@@ -181,7 +181,7 @@ public class Register extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 153, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lock-64x64-1213982.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/lock-64x64-1213982.png"))); // NOI18N
         jLabel6.setText(" Password: ");
         jPanelInfos.add(jLabel6);
 
@@ -198,7 +198,7 @@ public class Register extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 153, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/message-64x64-1214402.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/message-64x64-1214402.png"))); // NOI18N
         jLabel7.setText("      E-Mail: ");
         jPanelInfos.add(jLabel7);
 
@@ -210,7 +210,7 @@ public class Register extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 153, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/call-64x64-1214404.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cyberfreak/images/call-64x64-1214404.png"))); // NOI18N
         jLabel8.setText("     Phone: ");
         jPanelInfos.add(jLabel8);
 
