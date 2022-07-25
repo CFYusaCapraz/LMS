@@ -359,7 +359,7 @@ public class Login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Login Successful.\n"
                             + "Redirecting to Dashboard.", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
                     
-                    Dashboard  ds = new Dashboard();
+                    STDashboard  ds = new STDashboard();
                     ds.setVisible(true);
                     this.dispose();
                 }
